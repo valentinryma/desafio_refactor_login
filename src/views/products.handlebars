@@ -1,0 +1,48 @@
+<div>
+    <h1>Biendvenido {{user.firstName}} {{user.lastName}}</h1>
+    <h2>Datos del perfil:</h2>
+    <h3>Rol: {{user.rol}}</h3>
+    <div>Edad: {{user.age}}</div>
+    <div>Email: {{user.email}}</div>
+</div>
+
+<a href="/">Inicio</a>
+
+<div class="product-container">
+    {{#each results.payload}}
+    <div class="product">
+        <div class="thumbnails">
+            {{#each thumbnails}}
+            <img src="{{this}}" alt="Thumbnail 1">
+            {{/each}}
+        </div>
+        <div class="product-details">
+            <h2 class="product-title">{{title}}</h2>
+            <p class="product-code">Code: {{code}}</p>
+            <p class="product-price">Price: ${{price}}</p>
+            <p class="product-stock">Stock: {{stock}}</p>
+            <p class="product-category">Category: {{category}}</p>
+
+            {{#if status}}
+            <p class="product-status">Status: Available ✔</p>
+            <button class="btn-buy" id="{{_id}}">BUY</button>
+            {{!-- Quantity --}}
+            {{else}}
+            <p class="product-status">Status: Not available ❌</p>
+            <button class="btn-buy-hide">Not available</button>
+            {{/if}}
+        </div>
+    </div>
+    <br>
+    {{/each}}
+</div>
+<div class="pagination">
+    Current page: {{results.page}}
+    {{#if results.hasPrevPage}}
+    <a href="/products?page={{results.prevPage}}&limit={{results.limit}}">Prev</a>
+    {{/if}}
+
+    {{#if results.hasNextPage}}
+    <a href="/products?page={{results.nextPage}}&limit={{results.limit}}">Next</a>
+    {{/if}}
+</div>
