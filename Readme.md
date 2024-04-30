@@ -6,7 +6,7 @@
 - Sistema de usuario con sesiones y roles.
 - Hasheo de contraseña (bcrypt)
 - Login / Register con Passport: Locale - GitHub | Strategys
-- 
+
 
 **Tecnologías:** 
 DB: MongoDB
