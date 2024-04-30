@@ -9,10 +9,10 @@
 
 
 **Tecnologías:** 
-DB: MongoDB
-ORM: Mongoose
-Motor de plantillas: Handlebars
-Servidor: Node / Express
-Paginación: Mongoose Paginate V2.
-Autenticación: Passport: (Local - GitHub2)
+- DB: MongoDB
+- ORM: Mongoose
+- Motor de plantillas: Handlebars
+- Servidor: Node / Express
+- Paginación: Mongoose Paginate V2.
+- Autenticación: Passport: (Local - GitHub2)
 
